@@ -1,0 +1,21 @@
+---
+title: "Dev blog"
+layout: splash
+permalink: /
+date: 2016-03-23T11:48:41-04:00
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.05"
+  overlay_image: /assets/images/avi-richards-183715.jpg
+  cta_label:
+  cta_url:
+excerpt: "News, tips, thoughts, mistakes and other minutia about technologies I'm working on."
+---
+
+<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+
+<div class="grid__wrapper">
+  {% for post in site.posts limit:4 %}
+    {% include archive-single.html type="grid" %}
+  {% endfor %}
+</div>
